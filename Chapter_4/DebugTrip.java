@@ -18,7 +18,7 @@
    }
    public DebugTrip(String destination, String departure)
    {
-      this(destination, departure, DEFAULT_MODE); // changed 'this(destination) and this  (departure)' to '(destination, departure, DEFAULT_MODE)'
+      this(destination, departure, DEFAULT_MODE); // changed 'this(destination) and this(departure)' to '(destination, departure, DEFAULT_MODE)'
    }
    public DebugTrip(String destination, String departure, String mode)
    {
@@ -39,4 +39,5 @@
       return mode;
    }
 }
+
  
