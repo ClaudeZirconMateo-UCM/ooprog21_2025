@@ -7,7 +7,7 @@ public class DebugFour1
    {
       Scanner input = new Scanner(System.in);
       int radius;
-      Circle c = new DebugCircle(radius); // changed 'new Circle()' to 'new DebugCircle()'
+      DebugCircle c = new DebugCircle(radius); // changed 'new Circle()' to 'new DebugCircle(radius)'
       System.out.print("Enter a radius for a circle >> ");
       radius = input.nextInt();
       c = new DebugCircle(radius); // changed 'new DebugCircle(c)' to 'new DebugCircle(radius)'
@@ -16,4 +16,5 @@ public class DebugFour1
       System.out.println("The area is " + c.getArea());
    }
 }
+
 
