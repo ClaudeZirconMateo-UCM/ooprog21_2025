@@ -1,7 +1,7 @@
 // DebugFive4.java
 // Outputs highest of four numbers
 import java.util.*;
-class DebugFive4 //I removed public
+class DebugFive4 // class declaration (no public)
 {
    public static void main (String[] args) 
    {
@@ -9,21 +9,27 @@ class DebugFive4 //I removed public
       int highest;
       Scanner input = new Scanner(System.in);
       System.out.print("Enter an integer >> ");
-      one = input.nextInt();
+      one = input.nextInt(); // read first number from user
       System.out.print("Enter an integer >> ");
-      two = input.nextInt(); //'one' changed to 'two'
+      two = input.nextInt(); // read second number from user
       System.out.print("Enter an integer >> ");
-      three = input.nextInt(); //'one' changed to 'three'
+      three = input.nextInt(); // read third number from user
       System.out.print("Enter an integer >> ");
-      four = input.nextInt();//'one' changed to 'four'
+      four = input.nextInt(); // read fourth number from user
       
-      highest = one;
-      if (highest < two) //fixed if statement
+     if (one >= two && one >= three && one >= four) { // check if first number is the largest
+         highest = one;
+      }
+      else if(two >= one && two >= three && two >= four) { // check if second number is the largest
          highest = two;
-      if (highest < three) //fixed if statement
+      }
+      else if(three >= one && three >= two && three >= four) { // check if third number is the largest
          highest = three;
-      if (highest < four) //fixed if statement
-         highest = four;
-      System.out.println("The highest number is " + highest);
+      }
+      else {
+         highest = four; // if none above, fourth number is the largest
+      }
+      
+      System.out.println("The highest number is " + highest); // display the largest number
    }
 }
